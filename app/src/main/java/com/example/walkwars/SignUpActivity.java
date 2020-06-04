@@ -2,34 +2,29 @@ package com.example.walkwars;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class SignInActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
     ImageButton signinButton;
     EditText emailInput;
     EditText passwordInput;
     TextView signinText;
-    TextView signUpText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_up);
 
         signinButton = (ImageButton) findViewById(R.id.signin_button);
         emailInput = (EditText) findViewById(R.id.email_input);
         passwordInput = (EditText) findViewById(R.id.password_input);
         signinText = (TextView) findViewById(R.id.signin_txt);
-        signUpText = (TextView) findViewById(R.id.sign_up_txt);
 
         signinButton.setEnabled(false);
 
@@ -55,12 +50,8 @@ public class SignInActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) { inputFilled(); }
         });
 
-        signUpText.setOnClickListener(new Button.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                signUpOnClick();
-            }
-        });
+
+
     }
 
     protected void inputFilled(){
@@ -74,10 +65,4 @@ public class SignInActivity extends AppCompatActivity {
             signinText.setAlpha((float)0.5);
         }
     }
-
-    public void signUpOnClick(){
-        Intent intent = new Intent(this, SignUpActivity.class);
-        startActivity(intent);
-    }
 }
-

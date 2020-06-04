@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/signup_header"
+        android:layout_width="184dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<EditText
+android:id="@+id/email_input"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="64dp"
+android:layout_marginLeft="64dp"
+android:layout_marginTop="64dp"
+android:layout_marginEnd="64dp"
+android:layout_marginRight="64dp"
+android:hint="Enter Email"
+android:theme="@style/inputStyle"
+android:singleLine="true"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/signup_header" />
+
+<EditText
+android:id="@+id/password_input"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="64dp"
+android:layout_marginLeft="64dp"
+android:layout_marginTop="64dp"
+android:layout_marginEnd="64dp"
+android:layout_marginRight="64dp"
+android:hint="Enter Password"
+android:theme="@style/inputStyle"
+android:singleLine="true"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@+id/email_input" />
+
+    <TextView
+        android:id="@+id/signin_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:alpha=".5"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="Sign Up"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/signin_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_input" />
+
+    <ImageButton
+        android:id="@+id/signin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="64dp"
+        android:alpha=".3"
+        android:background="@color/background"
+        android:clickable="false"
+        android:contentDescription="@string/sigin"
+        app:layout_constraintStart_toEndOf="@+id/signin_txt"
+        app:layout_constraintTop_toBottomOf="@+id/password_input"
+        app:srcCompat="@drawable/ic_sign_up_button"
+        tools:ignore="VectorDrawableCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
